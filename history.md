@@ -1,3 +1,45 @@
+# v2.0.1 - 2020/03/12
+
+* Removed `put` from `package.json`
+
+# v2.0.0 - 2020/03/11
+
+* Changed functionality for `connectionFilter` so that both the origin and the destination can be filtered
+* Moved to `@babel/cli` from `babel-cli` as a dev-dependency
+* Removed dependency on `put` and replaced with native `Buffer`
+
+# v1.0.4 - 2020/03/11
+
+* Updated dependencies
+
+# v1.0.3 - 2019/08/17
+
+* Updated dependencies
+
+# v1.0.2 - 2019/01/12
+
+* Fixed issue where IPv6 clients were failing
+
+# v1.0.1 - 2019/01/11
+
+* Tightened up the `.eslintrc.yml` file for a few additional tests
+
+# v1.0.0 - 2019/01/10
+
+* Added babel for transpile
+* Fixed `(node:17070) [DEP0005] DeprecationWarning: Buffer() is deprecated` warning at runtime
+* Moved to eslint instead of jshint
+* Refactored constants for cleaner code
+* Updated node.js dependencies for Travis-CI
+
+# v0.3.0 - 2018/04/25
+
+* Added `connectionFilter` option to provide ability to filter destination addresses (thanks to @slava-vishnyakov for implementation and @jfowl for review and advice)
+
+# v0.2.7 - 2017/06/16
+
+* Modifed the authentication callback to return a `socket` based on pull-request from @dgramop
+
 # v0.2.6 - 2017/03/06
 
 * Fixed issue in support for ipv6 (thanks to @fabiensk)

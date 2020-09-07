@@ -1,9 +1,7 @@
-'use strict';
-
-var
-	socks5 = require('../lib'),
+const
+	socks5 = require('../dist/socks5'),
 	server = socks5.createServer({
-		authenticate : function (username, password, callback) {
+		authenticate : function (username, password, socket, callback) {
 			// verify username/password
 			if (username !== 'foo' || password !== 'bar') {
 				// respond with auth failure (can be any error)
@@ -37,7 +35,7 @@ server.on('authenticateError', function (username, err) {
 
 // When a reqest arrives for a remote destination
 server.on('proxyConnect', function (info, destination) {
-	console.log('connected to remote server at %s:%d', info.host, info.port);
+	console.log('connected to remote server at %s:%d', info.address, info.port);
 
 	destination.on('data', function (data) {
 		console.log(data.length);
